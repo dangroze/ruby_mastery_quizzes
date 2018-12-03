@@ -1,0 +1,24 @@
+..........F
+
+Failures:
+
+  1) Q2. Arithmetic `puts`es result of multiplying `TWELVE` by `FOURTEEN` by `SIXTEEN`
+     Failure/Error:
+       expect { load "questions/question_2.rb" }
+         .to output(/2688/).to_stdout
+
+     TypeError:
+       no implicit conversion of String into Integer
+     # questions/question_2.rb:3:in `*'
+     # questions/question_2.rb:3:in `<top (required)>'
+     # ./spec/question_2_spec.rb:3:in `load'
+     # ./spec/question_2_spec.rb:3:in `block (3 levels) in <top (required)>'
+     # ./spec/question_2_spec.rb:3:in `block (2 levels) in <top (required)>'
+
+Finished in 0.00956 seconds (files took 0.15857 seconds to load)
+11 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/question_2_spec.rb:2 # Q2. Arithmetic `puts`es result of multiplying `TWELVE` by `FOURTEEN` by `SIXTEEN`
+
