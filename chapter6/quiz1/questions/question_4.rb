@@ -34,3 +34,31 @@
 #   If the tests hang when you run them, it probably means your code
 #   doesn't work correctly, yet.
 
+inside_hall = true
+while command = gets.chomp
+  if command == "quit"
+    puts "Bye!"
+    break
+  end    
+  if inside_hall == true
+    if command == "look"
+      puts "You are standing in an hall with a marble floor. You see a door."      
+    elsif command == "north"
+      puts "Move to the study."
+      inside_hall = false
+    end
+  elsif inside_hall == false
+    if command == "look"
+      puts "You are in a warm and cosy study. You see a safe. You see a desk."    
+    elsif command == "look at desk"
+      puts "You see a piece of paper that reads, The combination is 2451."
+    elsif command == "south"
+      puts "You are now inside the hall."
+      inside_hall = true
+    elsif command == "enter combination 2451"
+      puts "You see some diamonds in the safe, pick them up and make your escape"
+      break
+    end
+  end
+end
+

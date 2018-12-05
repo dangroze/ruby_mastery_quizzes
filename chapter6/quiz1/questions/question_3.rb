@@ -22,4 +22,18 @@
 #   the user input.  You shouldn't need to enter any input manually.
 #   If the tests hang when you run them, it probably means your code
 #   doesn't work correctly, yet.
-
+inside_passage = true
+while command = gets.chomp
+  if command == "north"
+    if inside_passage == true        
+      puts "You are in a scary cave."
+      inside_passage = false
+    elsif inside_passage == false
+      puts "You walk into sunlight."
+      break
+    end
+  elsif command == "south"
+    puts "You are in a scary passage."
+    inside_passage = true
+  end
+end

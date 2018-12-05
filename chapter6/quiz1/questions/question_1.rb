@@ -26,4 +26,18 @@
 
 # * Note: You can assume that the user will always enter either an
 #   integer or `stop`.
+arr = []
 
+puts "Give me a number:"
+while input = gets.chomp
+  if input == "stop"
+    break
+  else
+    puts "Give me a number:"
+    arr << input.to_i
+  end
+end
+
+sum = arr.inject(0, :+)
+puts sum
+    

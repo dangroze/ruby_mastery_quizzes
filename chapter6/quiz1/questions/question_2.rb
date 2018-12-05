@@ -19,4 +19,18 @@
 #
 # * Note: You can assume the players will only ever input `rock`,
 #   `paper` or `scissors`.
-
+puts "Player one, choose your weapon: "
+input1 = gets.chomp
+puts "Player two, choose your weapon: "
+input2 = gets.chomp
+if input1 == input2
+  puts "It's a draw"
+elsif input1 == "rock" && input2 == "scissors"
+  puts "Player 1 wins"
+elsif input1 == "paper" && input2 == "rock"
+  puts "Player 1 wins"
+elsif input1 == "scissors" && input2 == "paper"
+  puts "Player 1 wins"
+else
+  puts "Player 2 wins"
+end
