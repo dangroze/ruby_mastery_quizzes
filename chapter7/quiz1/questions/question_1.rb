@@ -19,3 +19,6 @@
 # * Note: You can assume the user will only enter integers separated
 #   by commas with no spaces.
 
+print "Enter numbers, separated by commas: "
+gets.split(",").each { |number| puts '-' * number.to_i }
+

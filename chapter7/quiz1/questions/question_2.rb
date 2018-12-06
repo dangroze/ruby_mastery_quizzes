@@ -51,3 +51,38 @@
 #   input integers for group numbers that exist when they are asked
 #   for the number of a group to print out.
 
+puts "Enter number of groups: "
+groups = gets.chomp
+array = Array.new(groups.to_i) { [] } #New array with user input number of sub
+# arrays
+subarray_no = 0 # subarray iterator
+
+while true do
+  puts "Enter a name: "
+  name = gets.chomp 
+  if name == "stop"
+    break
+  elsif subarray_no >= groups.to_i
+    subarray_no = 0
+    array[subarray_no].push(name)
+    subarray_no += 1
+  else
+    array[subarray_no].push(name)
+    subarray_no += 1
+  end
+end
+
+while true do
+  puts "Enter a group number to print: "
+  group_no = gets.chomp
+  grp_array = []
+  if group_no == "stop"
+    break
+  else
+    array[group_no.to_i - 1].each do |x|
+      grp_array.push(x)
+    end
+  end
+  puts grp_array.join(", ")
+end
+

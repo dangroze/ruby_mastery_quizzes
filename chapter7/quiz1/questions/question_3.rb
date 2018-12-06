@@ -63,4 +63,34 @@
 #   ```
 
 river = "-----,--C--,CC-CC,CC-CC"
+river_index = 0
+player_position = 2
+
+river_array = river.split(",")
+river_array[0].slice!(2)
+river_array[0].insert(2, "P")
+
+while true do
+  puts river_array
+  puts "Type left, right or neither to choose direction:"
+  dir = gets.chomp
+  river_array[river_index].slice!(player_position)
+  river_array[river_index].insert(player_position, "-")
+  river_index += 1
+  if dir == "left"
+    player_position -= 1
+  elsif dir == "right"
+    player_position += 1
+  end
+  if river_index == 4
+    puts "You survived!"
+    break
+  elsif (river_array[river_index])[player_position] == "C"
+    puts "You were eaten"
+    break
+  else
+    river_array[river_index].slice!(player_position)
+    river_array[river_index].insert(player_position, "P")
+  end
+end
 
