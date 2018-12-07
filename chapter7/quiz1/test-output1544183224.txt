@@ -1,0 +1,26 @@
+...F.........
+
+Failures:
+
+  1) Q2. People grouper has acceptable code quality
+     Failure/Error: expect(code_quality.acceptable?).to(eq(true), code_quality.problems)
+
+       Inspecting 1 file
+       C
+
+       Offenses:
+
+       questions/question_2.rb:56:39: C: Layout/LeadingCommentSpace: Missing space after #.
+       array = Array.new(groups.to_i) { [] } #New array with user input number of sub
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+       1 file inspected, 1 offense detected
+     # ./spec/question_2_spec.rb:78:in `block (2 levels) in <top (required)>'
+
+Finished in 6.37 seconds (files took 0.16715 seconds to load)
+13 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/question_2_spec.rb:76 # Q2. People grouper has acceptable code quality
+
