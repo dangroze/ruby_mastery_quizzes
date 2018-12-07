@@ -53,7 +53,7 @@
 
 puts "Enter number of groups: "
 groups = gets.chomp
-array = Array.new(groups.to_i) { [] } #New array with user input number of sub
+array = Array.new(groups.to_i) { [] } # New array with user input number of sub
 # arrays
 subarray_no = 0 # subarray iterator
 
