@@ -31,7 +31,7 @@ word = gets.chomp.split("")
 score = 0
 
 word.each do |letter|
-  points.each do |key, value|
+  points.each do |key, _value|
     if points[key].include?(letter)
       score += key
     end
