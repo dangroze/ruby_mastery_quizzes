@@ -30,3 +30,14 @@ people = [
   { "name" => "Will", "sport" => "cycling", "fruit" => "blackberry" }
 ]
 
+print "Enter a category: "
+category = gets.chomp
+print "Enter a value: "
+cat_value = gets.chomp
+
+people.each do |person|
+  if person[category] == cat_value
+    puts person["name"]
+  end
+end
+

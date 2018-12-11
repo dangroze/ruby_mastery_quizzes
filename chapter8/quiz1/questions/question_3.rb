@@ -36,3 +36,21 @@ people = [
   { "name" => "Will", "sport" => "cycling", "fruit" => "blackberry" }
 ]
 
+print "Enter a category: "
+category = gets.chomp
+
+sort = {}
+people.each do |person|
+  cat = person[category]
+  name = person["name"]
+  if sort[cat] == nil
+    sort[cat] = [name]
+  else
+    sort[cat].push(name)
+  end
+end
+sort.each do |key, value|
+  puts key
+  puts value
+end
+  
