@@ -19,6 +19,30 @@
 #           * get milk
 #           * get the papers
 #           ```
-
 # * Note: When you run the automated tests, make sure to remove from
 #   the top level of the file any calls to any methods.
+class Todo
+  def initialize(string)
+    @string = string
+  end
+  
+  def text
+    return @string
+  end
+end  
+  
+class TodoList
+  def initialize
+    @todolist = []
+  end
+  
+  def add(todo)
+    @todolist.push(todo.text)
+  end
+  
+  def print
+    @todolist.each do |item|
+      puts "* #{item}"
+    end
+  end
+end
